@@ -1,8 +1,12 @@
 $nice-blue: rgb(59, 128, 209);
 
+body
+{
+  font-family: Roboto, Arial, sans-serif;
+}
+#header, #footer { background:black; }
 
-#header, #footer { background:$nice-blue; }
-html { background: $nice-blue;}
+html { background: black;}
 
 h1
 {
@@ -29,3 +33,12 @@ h1
  {
    font-family: Roboto;
  }
+
+
+//>>>>> SPLASH PAGE
+
+//Banner
+.splash #splashtext
+{
+  background: black;
+}
