@@ -1,0 +1,15 @@
+/**
+ * The MetaModels extension allows the creation of multiple collections of custom items,
+ * each with its own unique set of selectable attributes, with attribute extendability.
+ * The Front-End modules allow you to build powerful listing and filtering of the
+ * data in each collection.
+ *
+ * @package    MetaModels
+ * @subpackage Core
+ * @author     Christian Schiffler <c.schiffler@cyberspectrum.de>
+ * @author     Stefan Heimes <cms@men-at-work.de>
+ * @copyright  The MetaModels team.
+ * @license    LGPL.
+ * @filesource
+ */
+if(window.MooTools){(function($){var MetaModels=new Class({Implements:Options,options:{},classhooks:{},initialize:function(options){this.setOptions(options);this.addClassHook("submitonchange",this.applySubmitOnChange);this.addClassHook("submitonclick",this.applySubmitOnClick)},addClassHook:function(name,callback){this.classhooks[name]=callback},removeClassHook:function(name){delete (this.classhooks[name])},applyClassHooks:function(){Object.each(this.classhooks,function(value,key){$$("."+key).each(function(el,key){value(el)})})},applySubmitOnChange:function(el){document.id(el).addEvent("change",function(){document.id(el).getParent("form").submit()})},applySubmitOnClick:function(el){document.id(el).addEvent("click",function(){document.id(el).getParent("form").submit()})}});var MetaModelsFE=new MetaModels();window.addEvent("domready",function(){MetaModelsFE.applyClassHooks()})})(window.MooTools)}else{if(window.jQuery){(function($){$.MetaModels={options:{},classhooks:{},events:[],init:function(opts){this.options=$.extend(this.options,opts);this.addClassHook("submitonchange",this.applySubmitOnChange);this.addClassHook("submitonclick",this.applySubmitOnClick)},applySubmitOnChange:function(el,helper){helper.bindEvent({object:el,type:"change",func:function(event){$(this).parents("form:first")[0].submit()}})},applySubmitOnClick:function(el,helper){helper.bindEvent({object:el,type:"click",func:function(event){$(this).parents("form:first")[0].submit()}})},addClassHook:function(name,callback){this.classhooks[name]=callback},removeClassHook:function(name){delete (this.classhooks[name])},applyClassHooks:function(){var self=this;$.each(this.classhooks,function(key,value){$("."+key).each(function(key1,el){value(el,self)})})},bindEvent:function(objEvent){this.events.push(objEvent);$(objEvent.object).bind(objEvent.type,objEvent.func)},unbindEvent:function(objEvent,blnNotRemove){var intIndex=null;$(objEvent.object).unbind(objEvent.type);if(blnNotRemove!==true){for(var i=0;i<this.events.length;i++){if(objEvent.object===this.events[i].object&&objEvent.type===this.events[i].type){intIndex=i;break}}if(intIndex!==null){this.events.splice(intIndex,1)}}},unbindEvents:function(){var arrStore=[];for(var i=0;i<this.events.length;i++){if(this.onLoadWindowScroll===this.events[i]){arrStore.push(this.onLoadWindowScroll);continue}this.unbindEvent(this.events[i],true)}this.events=arrStore}};$(document).ready(function(){$.MetaModels.init();$.MetaModels.applyClassHooks()})})(window.jQuery)}};

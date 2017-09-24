@@ -1,0 +1,6 @@
+<?php $this->extend($this->searchable ? 'block_searchable' : 'block_unsearchable'); ?>
+
+<?php $this->block('content'); ?>
+<?= $this->items ?>
+<?= $this->pagination ?>
+<?php $this->endblock(); ?>

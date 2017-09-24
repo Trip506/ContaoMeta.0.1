@@ -1,0 +1,10 @@
+<?php 
+foreach ((array) $this->raw as $k => $row)
+{
+	foreach (is_array($row) ? $row : array() as $kk => $col)
+	{
+		echo (($kk !=0) ? ' ': '' ).$col['value'];
+	}
+	if ($k != (count($this->raw['value']) -1)) echo "\n";
+}
+?>
