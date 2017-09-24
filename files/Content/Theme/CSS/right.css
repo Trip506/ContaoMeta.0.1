@@ -1,0 +1,15 @@
+#right div.inside {
+  background: #ecf3ff;
+  border-left: 0px solid gray; }
+  #right div.inside h1 {
+    font-size: 30px;
+    font-family: Ubuntu;
+    color: #a75243; }
+#right .ce_teaser a {
+  font-family: Ubuntu; }
+  #right .ce_teaser a h1 {
+    font-size: 20px;
+    color: #3e4145; }
+#right .ce_teaser img {
+  max-height: 200px;
+  max-width: 300px; }

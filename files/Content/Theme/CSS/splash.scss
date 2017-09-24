@@ -1,0 +1,52 @@
+.splash
+{
+
+
+  h1, h2
+  {
+    color:white;
+  }
+
+
+  #splashtext
+  {
+    z-index:2;
+    background-color:red;
+    color:white;
+
+    h2
+    {
+      margin:0;
+      font-family: Caveat;
+      font-size:80px;
+      letter-spacing: 7.2px;
+
+
+    }
+    p
+    {
+       font-family: Reem Kufi;
+       font-size: 25px;
+    }
+  }
+
+
+}
+
+.british-overlay
+{
+  height:400px;
+  width:100%;
+  position: absolute;
+  z-index:1;
+  filter: opacity(50);
+background-image: linear-gradient(white 2px, transparent 2px),
+linear-gradient(90deg, white 2px, transparent 2px),
+linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
+background-size:100px 100px, 100px 100px, 20px 20px, 20px 20px;
+background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px
+
+
+
+}

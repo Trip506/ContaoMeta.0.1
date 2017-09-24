@@ -1,0 +1,119 @@
+.calendar { //calendar table element
+width:100%;
+background-color: rgb(244, 236, 239);
+
+ a:hover { color: rgb(41, 146, 255);}
+
+}
+
+
+
+.calendar td { // Calendar days
+  height: 120px;
+}
+tr, td { border:1px solid black;}
+
+
+.event { //Holder for Name and Time
+  display:block;
+  font-size: 20px;
+  margin:0;
+
+  a {
+    font-size: 13px;
+    font-family: Ubuntu;
+    margin: 4px;
+  }
+
+  a.time {
+       color:rgb(0, 194, 255);
+       font-size: 13px;
+     }
+
+
+     .ce_teaser
+     {
+       h1
+       {
+         font-size: 24px;
+         color:rgb(0, 0, 0);
+       }
+
+       p
+       {
+         font-size: 17px;
+       }
+
+       padding:15px;
+       background:rgb(207, 198, 198);
+     }
+ }
+
+.head { // Month prev, current and next
+  text-align: center;
+  vertical-align: middle;
+  height:100px;
+  background: rgb(245, 86, 86);
+}
+
+.head.current {
+  font-size: 30px;
+}
+
+.head.previous, .head.next {
+ font-size: 17px;
+}
+
+
+
+.label { //Days of the week
+  width: 14.25%;
+  font-size: 14px;
+  text-align:center;
+}
+
+.calendar .header {
+  font-size: 0.75em;
+  background-color: #efefef;
+  padding-left: 3px;
+}
+
+.calendar .empty .header {
+  background-color: #fff;
+}
+
+.calendar .today .header {
+  background-color: #9f111b;
+  color: #fff;
+  font-weight: 700;
+}
+
+.calendar .event {
+
+  line-height: 1.1;
+}
+
+
+.minicalendar .head,
+.minicalendar .label,
+.minicalendar td {
+  text-align: center;
+}
+
+.minicalendar .active {
+  background: #9f111b;
+}
+
+.minicalendar .active a,
+.minicalendar .active a:visited {
+  color: #fff;
+}
+
+.layout_upcoming {
+  padding: 1em 0.25em;
+  border-bottom: 1px solid #ccc;
+}
+
+.layout_upcoming.odd {
+  background: #efefef;
+}

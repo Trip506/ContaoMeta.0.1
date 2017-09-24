@@ -1,0 +1,55 @@
+#================================================================================
+# Website-Template : Contao_Open_Source_CMS.sql
+#================================================================================
+# Contao-Website   : Contao Open Source CMS
+# Contao-Database  : contao_uos
+# Saved by User    : Trip506 (Samuel-Furneaux)
+# Time stamp       : 2017-08-10 at 10:33:01
+#
+# Contao Extension : BackupDB, Version 3.2.0
+# Copyright        : Softleister (www.softleister.de)
+# Author           : Hagen Klemp
+# Licence          : LGPL
+#
+# Visit Contao project page http://www.contao.org for more information
+#
+#-----------------------------------------------------
+# Contao Version 3.5.27
+# The following extensions must be installed:
+#-----------------------------------------------------
+#   - composer                    : Version 0.16.6 stable, Build 5
+#   - _autoload
+#   - ce-access
+#   - dc_multilingual
+#   - dcawizard
+#   - dma_elementgenerator
+#   - easy_themes
+#   - easyFavicon
+#   - full-background-images
+#   - haste
+#   - httprequestextended
+#   - m17StickyBEFooter
+#   - tablelookupwizard
+#   - youtube_iframe
+#
+#================================================================================
+
+#------------------------------------------
+# Installation:
+#------------------------------------------
+
+ 1. Install standard paket Contao in your domain.
+    (ex. extract ZIP and FTP upload to your webspace)
+    Don't use the InstallTool now, but as point 5!
+
+ 2. Installation of all listed extensions.
+
+ 3. Save this website-template in the path /templates/.
+
+ 4. Save all files needed for the website-template in path
+    /templates/ and /files/ or subdirectories (just like
+    in the template creation).
+
+ 5. Run the InstallTool of Contao now and import from
+    the website-template.
+

@@ -1,0 +1,18 @@
+
+<div class="layout_short arc_<?= $this->archive->id ?> block<?= $this->class ?>">
+
+ <?php // $this->showTemplateVars(); ?>
+  <h2><?= $this->linkHeadline ?></h2>
+
+  <div class="teaser">
+    <?= $this->teaser ?>
+  </div>
+  <?php if ($this->hasMetaFields): ?>
+    <p class="info">Published <?= $this->author ?><time datetime="<?= $this->datetime ?>"> on <?= substr($this->date, 0, 10); ?> at <?= substr($this->date, 10, 15); ?> </time>  <?= $this->commentCount ?></p>
+  <?php endif; ?>
+
+
+
+
+
+</div>

@@ -1,0 +1,640 @@
+
+@import "layout/_globals";
+@import "modules/_calendar";
+@import "modules/_register";
+
+
+// STRUCTURE //
+//
+//  html
+//   -body
+//   --wrapper
+//   ----header ( .inside )
+//   ----container ( .inside )
+//   ---------- left ( .inside )
+//   ---------- right ( .inside )
+//   ---------- main ( .inside )
+//   ---footer ( .inside )
+
+
+html
+{
+
+  overflow-y: scroll;
+  height: 100%;
+
+}
+
+
+/// -------------*** BODY
+
+body
+{
+  //font-family: Roboto, Arial, sans-serif;
+}
+
+h1,h2,h3,h4,h5 { //font-family: Passion One;
+}
+p,a { //font-family: Roboto;
+}
+
+
+ #wrapper { }
+
+/// -------------*** HEADER
+
+#header
+    {
+
+     .inside // Blocks Container
+     {
+       width:100%;
+       height:100%;
+
+       img { //Logo
+         height:50px;
+         min-width:50px;
+
+        }
+      nav.mod_navigation //Navigation list
+       {
+
+          ul
+           {
+           }
+
+            li
+             {
+               padding:4px;
+               display:inline-block;
+            }
+
+            a
+            {
+              color:white;
+            }
+       }
+
+          .formbody
+            {
+             padding:10px;
+
+
+             input:before
+             {
+               content:url('.../Content/Images/Search.svg');
+             }
+
+             input
+             {
+
+               width:100%;
+             }
+
+             #ctrl_submit_73 //Submit button
+             {
+               display:none;
+             }
+
+            }
+
+
+
+         #header-sitename {
+         display:none;
+       }
+
+
+
+     } // end of .inside
+   } //end of header
+
+    /// -------------*** CONTAINER
+
+        #container { }
+
+       /// -------------*** LEFT COLUMN
+
+        #left {div.inside {} }
+
+      /// -------------*** RIGHT COLUMN
+
+        #right {div.inside {} }
+
+      /// -------------*** CENTER COLUMN
+
+      #main {
+
+         .inside {}
+       }
+
+  /// -------------*** FOOTER
+#footer
+{
+
+  //background: rgb(103, 84, 129);
+  padding:15px;
+
+   div.inside
+   {
+    @import"layout/_footer";
+
+     #main_navigation-footer //Unique module main nav with white line
+     {
+       border-right: 1px solid;
+       border-color:white;
+
+
+       li
+       {
+         margin:5px;
+
+         a, span.active
+         {
+           color:rgb(178, 232, 237);
+           font-size: 18px;
+
+         }
+
+         span.active
+         {
+           color:rgb(210, 190, 164);
+         }
+       }
+
+     }
+
+     #sitemap-footer //Sitemap from unique module
+     {
+
+        ul.level_1
+        {
+          display:flex;
+          flex-wrap: wrap;
+
+          li
+          {
+
+            min-width:100px;
+          }
+
+          ul.level_2
+          {
+            margin-left: 4px;
+
+            a
+            {
+              color:rgb(172, 172, 172);
+            }
+          }
+        }
+     }
+     .sitemap-footer-custom
+     {
+
+       h1
+       {
+         color:white;
+       }
+
+       a
+       {
+
+         color: rgb(185, 177, 179);
+       }
+       time:before
+       {
+         content:": "
+       }
+       time
+       {
+         color:rgb(199, 93, 25);
+       }
+     }
+
+   }
+}
+
+
+////////////////////////////////// CONTENT ELEMENTS
+
+///Custom elements
+
+.img-splash //Front page splash picture
+{
+   height:400px;
+   background-position:center bottom;
+   background-repeat:no-repeat;
+   background-size:cover;
+    background-attachment:fixed;
+}
+
+////////Contao elements
+
+//>>>>>> ARTICLE
+
+      .mod_article
+       {
+
+         padding:10px;
+         .ce_image { }
+         .ce_text
+          {
+
+          }
+         .ce_hyperlink { }
+
+
+         &.no-padding
+         {
+           padding:0px;
+         }
+       }
+
+       .img_section
+       {
+         padding:0px;
+       }
+
+
+
+//>>>>>> CALENDAR
+
+.mod_eventreader
+{
+  figure
+  {
+    height:200px;
+  }
+  img {
+    width:400px
+  }
+}
+
+.mod_newsarchive
+{
+  .layout_latest
+  {
+
+  }
+}
+
+//>>>>>>>>> tEASER
+
+//>>>>>>>>> SlIDER
+
+ .slider_1
+ {
+
+   a.slider-prev, a.slider-next,
+   {
+     display: none;
+   }
+
+   span.slider-menu
+   {
+     b { height:100px;}
+   }
+
+ }
+
+ //>>>>>> METAMODELS
+
+ .ce_metamodel_content
+ {
+   .layout_full
+    {
+      .item
+      {
+        width:300px;
+        border:2px solid black;
+
+        .field
+        {
+         border:1px solid grey;
+         display: flex;
+         flex-direction:row;
+         justify-content: space-between;
+
+
+           .label
+           {
+             width:30px;
+             font-weight: bold;
+             font-size: 20px;
+           }
+
+           .value
+           {
+             color:red;
+           }
+        }
+      }
+
+    }
+ }
+
+//>>>>>>>> GALLERY
+
+.gallery, .gallery_small {
+  margin-top: 30px;
+  .column
+  {
+    margin: 20px;
+
+  }
+}
+
+.gallery {
+
+   figure
+   {
+   height: 200px;
+   }
+
+   img
+   {
+    width:300px;
+   }
+  }
+
+.gallery_small
+{
+  figure
+  {
+  height: 150px;
+  }
+
+  img
+  {
+   width:150px;
+  }
+
+}
+
+
+   //////////////////////////////Modules
+  #mini-calendar
+   {
+      display:none;
+   }
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////// MEDIA QUERIES /////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////
+
+
+@media (max-width:880px) { //
+  #big-calendar
+  {
+    td
+    {
+      height:90px;
+    }
+    a
+    {
+      font-size: 14px;
+    }
+  }
+}
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////// OTHER LAYOUTS  ///////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////
+
+
+///------------** ARTICLES
+
+body.article //Customizable attributes for articles pages. These pages have their own Contao layout
+{
+ .mod_article
+ {
+  max-width: 1200px;
+  padding:15px;
+
+   h1.ce_headline.first
+   {
+    font-size: 40px;
+   }
+
+   h1.ce_headline
+   {
+    font-size: 28px;
+  }
+
+   .questions, .rollplay, .text-letter
+   {
+     padding-left:10px;
+     border-left:2px;
+     border-left-color: black;
+     box-shadow: 5px 5px 5px grey;
+
+   }
+
+   .questions
+   {
+          box-shadow: 5px 5px 5px grey;
+          background: rgba(218, 232, 201, 0.58);
+   }
+
+   .rollplay
+   {
+     background: rgba(204, 243, 255, 0.69);
+   }
+
+   .text-letter
+   {
+     background: rgb(187, 255, 204);
+     p
+     {
+       font-family: Satisfy;
+       font-size: 20px;
+     }
+   }
+
+   .ce_image
+   {
+    margin:15px 0;
+   }
+
+   .ce_text.profile
+   {
+     margin:10px;
+     background: rgb(241, 246, 255);
+
+      img
+      {
+        border-radius:50px;
+        width:100px;
+      }
+
+      p
+      {
+        padding-top:10px;
+      }
+   }
+ }
+
+
+
+
+
+ .mod_comments // A horrible mess atm
+ {
+
+   padding:6%;
+
+  .comment_default
+  {
+    border:0.5px solid black;
+    padding:10px;
+    margin:10px 0px;
+
+      p.info
+      {
+        text-decoration: underline;
+      }
+  }
+
+  .reply
+  {
+    color: rgb(116, 116, 116);
+    background: rgb(255, 255, 245);
+    padding:5px;
+  }
+
+
+   form
+   {
+     margin-top:50px;
+     max-width: 500px;
+
+     .widget
+     {
+       margin-top: 10px;
+     }
+
+     #ctrl_website
+     {
+       display: none;
+     }
+
+     #ctrl_email
+     {
+       display: none;
+     }
+
+     label#lbl_notify_0
+     {
+       display: initial;
+     }
+
+     label
+     {
+      display: none;
+
+     }
+   }
+ }
+}
+
+body.splash-page
+{
+
+ #main {
+    width:auto;
+    height:auto;
+    background-repeat:no-repeat;
+    background-size:contain; background-position: bottom;
+  }
+
+
+   #splash
+
+     .jumbo-gallery
+     {
+       figure
+       {
+         height:200px;
+       }
+     }
+
+
+     .image-hyperlink
+     {
+         a
+         {
+           color:white;
+         }
+     }
+
+   .ce_teaser
+  {
+    img
+    {
+      height:200px;
+    }
+  }
+  }
+
+
+  ///////////// PAGES WITH BODY CLASSES
+
+  .articles
+  {
+    .mod_comments
+    {
+      display:none;
+    }
+  }
+
+ @media (max-width:1250px) {
+  #right { display: none;}
+ }
+
+  @media (max-width:768px) {
+
+  #header-sitename {
+    display:inherit;
+  }
+
+  //Hide
+
+  #header, #splash-banner, #header-search {
+    display: none;
+   }
+
+   #main_navigation-footer ul.level_1 li {
+     display:inline-block;
+   }
+
+   #big-calendar
+   {
+     td
+     {
+       height:60px;
+     }
+   }
+  }
+
+  @media (max-width:480px) {
+
+    #big-calendar
+    {
+      display:none;
+    }
+
+    #mini-calendar
+    {
+      display:initial;
+    }
+
+  }

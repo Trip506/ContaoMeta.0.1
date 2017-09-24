@@ -1,0 +1,36 @@
+{
+    "name": "terminal42/contao-easy_themes",
+    "type": "contao-module",
+    "description": "Contao Open Source CMS extension easy_themes",
+    "keywords": ["contao", "easy", "themes"],
+    "license": "LGPL",
+    "authors": [
+        {
+            "name":"Yanick Witschi",
+            "email":"yanick.witschi@terminal42.ch",
+            "homepage":"http://www.terminal42.ch",
+            "role":"Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "contao/core-bundle":"~3.2 || ^4.4.1",
+        "contao-community-alliance/composer-plugin":"~2.4 || ~3.0"
+    },
+    "autoload": {
+        "classmap": [""]
+    },
+    "replace": {
+        "contao-legacy/easy_themes": "*"
+    },
+    "extra": {
+        "contao": {
+            "sources": {
+                "": "system/modules/easy_themes"
+            },
+            "runonce": [
+                "runonce/runonce.php"
+            ]
+        }
+    }
+}

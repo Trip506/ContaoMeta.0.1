@@ -1,0 +1,61 @@
+
+<div class="layout_latest container arc_<?= $this->archive->id ?> block<?= $this->class ?>">
+<!--TITLE --> 
+<div class="row"> 
+ <div class="col-md-6">
+
+  <h2><?= $this->linkHeadline ?></h2>
+ </div>
+
+<!--TITLE --> 
+
+<!--IMAGE --> 
+<div class="row"> 
+  <div class="col-md-10">
+
+      <?php if ($this->href): ?>
+        <a href="<?= $this->href ?>"<?= $this->attributes ?> title="<?= $this->alt ?>">
+      <?php endif; ?>
+
+
+      <?php // $this->insert('picture_default', $this->picture); ?>
+
+
+      <?php if ($this->href): ?>
+        </a>
+      <?php endif; ?>
+  </div>
+</div>
+ <!--//IMAGE-->      
+
+
+<!-- TEXT --> 
+
+  <div class="col-md-6">
+      <div class="teaser">
+    <?= $this->teaser ?>
+  </div>
+ </div>
+ </div>
+
+
+
+<!--//TEXT -->  
+
+  <?php if ($this->hasMetaFields): ?>
+    <p class="info">Published <?= $this->author ?><time datetime="<?= $this->datetime ?>"> on <?= substr($this->date, 0, 10); ?> at <?= substr($this->date, 10, 15); ?> </time>  <?= $this->commentCount ?></p>
+  <?php endif; ?>
+
+  <?php if ($this->addImage): ?>
+    <figure class="image_container <?= $this->floatClass ?>"<?php
+     if ($this->margin): ?>
+      style="<?= $this->margin ?>";
+    <?php endif; ?>
+
+    </figure>
+  <?php endif; ?>
+
+
+
+
+</div>

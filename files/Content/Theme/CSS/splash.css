@@ -1,0 +1,10 @@
+.splash {
+  min-height: 100px;
+  height: 300px; }
+  .splash h1, .splash h2 {
+    color: white;
+    font-family: Ubuntu; }
+  .splash h1 {
+    font-size: 27px; }
+  .splash h2 {
+    font-size: 20px; }

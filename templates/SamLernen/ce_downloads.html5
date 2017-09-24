@@ -1,0 +1,47 @@
+<?php $this->extend('block_searchable'); ?>
+
+<?php $this->block('content'); ?>
+
+	<?php//$this->showTemplateVars(); ?>
+
+ <div class="container">
+ <div class="row"> 
+ 
+    <?php foreach ($this->files as $file): ?>
+
+
+      <div class="col-md-3">
+
+
+      
+
+       
+
+      <?php if ($file['mime'] == "image/jpeg" || $file['mime'] == "image/png") 
+      { ?>
+         <img style="height:100px; width:150px;" src="<?= $file['href'] ?>">  
+
+     <?php } 
+
+     else 
+     { ?>
+       <img style="height:100px; width:150px;" src="  <?= $file['icon'] ?> "> 
+     <?php }
+
+     ?> 
+
+       
+       <div class="row">
+       <a href="<?= $file['href'] ?>" title="<?= $file['title'] ?>"><?= substr($file['link'], 0 , 15)."..."; ?> 
+         <span class="size">(<?= $file['filesize'] ?>)
+         </span><?= Image::getHtml($file['icon'], '', 'class="mime_icon"') ?> 
+         </a>
+        </div> <!-- end of row -->  
+
+      </div>
+    <?php endforeach; ?>
+
+  </div> <!-- End of row -->
+ </div> <!-- End of container -->
+
+<?php $this->endblock(); ?>
