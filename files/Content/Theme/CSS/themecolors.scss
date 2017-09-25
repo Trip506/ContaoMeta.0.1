@@ -1,17 +1,24 @@
 $nice-blue: rgb(59, 128, 209);
 
+
+//>> Cannabis theme
+$cannabis-green: rgb(37, 221, 105);
+//
+$base-theme-color: $cannabis-green;
+
+
 body
 {
   font-family: Roboto, Arial, sans-serif;
 }
-#header, #footer { background:black; }
+#header, #footer { background:$base-theme-color; }
 
-html { background: black;}
+html { background: $base-theme-color;}
 
 h1
 {
   font-family: Roboto, Arial, sans-serif;
-   font-family:Ubuntu;
+  font-family:Ubuntu;
 
  }
 
@@ -40,5 +47,5 @@ h1
 //Banner
 .splash #splashtext
 {
-  background: black;
+  background: rgb(193, 95, 214);
 }
